@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>GPS Tracking Platform</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
+</head>
+
+<body>
+
+<div class="app">
+
+<div class="sidebar">
+<h2>Devices</h2>
+<div id="deviceList" class="device-list">
+Tracker001
+</div>
+</div>
+
+<div class="main">
+
+<div class="toolbar">
+
+<h1>GPS Platform</h1>
+
+<div class="toolbar-buttons">
+
+<a href="/export" class="btn btn-secondary">
+Download Excel
+</a>
+
+<button onclick="refreshData()" class="btn btn-secondary">
+Refresh
+</button>
+
+<button onclick="showHistory()" class="btn">
+History Trip
+</button>
+
+<button onclick="showLive()" class="btn btn-secondary">
+Live View
+</button>
+
+</div>
+
+</div>
+
+<div id="map"></div>
+
+<div id="playbackControls" class="playback-bar">
+
+<span class="playback-title">Trip Playback</span>
+
+<button onclick="startPlayback()" class="btn">Play</button>
+<button onclick="pausePlayback()" class="btn btn-secondary">Pause</button>
+<button onclick="stopPlayback()" class="btn btn-secondary">Stop</button>
+
+Speed :
+
+<select id="speedControl" onchange="changeSpeed()">
+<option value="1">1x</option>
+<option value="2">2x</option>
+<option value="4">4x</option>
+<option value="8">8x</option>
+</select>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="map.js"></script>
+
+</body>
+</html>
