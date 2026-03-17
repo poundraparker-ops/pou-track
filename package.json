@@ -1,0 +1,14 @@
+{
+  "name": "pou-track",
+  "version": "1.0.0",
+  "description": "GPS tracking backend server",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "better-sqlite3": "^9.0.0",
+    "exceljs": "^4.3.0"
+  }
+}
